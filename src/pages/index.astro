@@ -1,5 +1,5 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '../layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Bem-vindo ao Seu Site',
@@ -8,23 +8,24 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <main class="px-6 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 mx-auto max-w-4xl">
-    <div class="text-center pb-10 md:pb-16 max-w-3xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4">
+  <!-- Hero Widget ******************* -->
+  <section class="px-6 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 mx-auto max-w-3xl">
+    <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
         Bem-vindo ao 
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 highlight">
           Seu Site
         </span>
       </h1>
       <div class="max-w-3xl mx-auto">
-        <p class="text-xl text-gray-600 mb-6">
+        <p class="text-xl text-muted mb-6 dark:text-slate-300">
           Descubra as melhores informações, dicas e recomendações. 
           Seu guia completo para tomar as melhores decisões.
         </p>
         <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
           <div class="flex w-full sm:w-auto">
             <a
-              class="inline-flex items-center justify-center rounded-lg bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white font-medium transition-colors w-full"
+              class="btn btn-primary sm:mb-0 w-full"
               href="/blog"
             >
               Ver Artigos
@@ -33,11 +34,14 @@ const metadata = {
         </div>
       </div>
     </div>
+  </section>
 
-    <section class="py-12 md:py-16 lg:py-20">
-      <div class="mx-auto max-w-4xl">
-        <div class="mb-8">
-          <h2 class="mb-8 text-3xl lg:text-4xl font-bold">
+  <!-- Content Widget **************** -->
+  <section class="px-6 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="row-gap-10 dark:text-slate-400">
+        <div class="md:py-4 md:pr-16 mb-6 md:mb-0">
+          <h2 class="mb-8 text-3xl lg:text-4xl font-bold font-heading">
             Por que escolher nosso site?
           </h2>
         </div>
@@ -51,7 +55,7 @@ const metadata = {
               </div>
               <h3 class="text-lg font-medium">Informações Confiáveis</h3>
             </div>
-            <p class="text-gray-600">
+            <p class="text-muted dark:text-slate-400">
               Conteúdo verificado e atualizado regularmente por especialistas.
             </p>
           </div>
@@ -65,7 +69,7 @@ const metadata = {
               </div>
               <h3 class="text-lg font-medium">Respostas Rápidas</h3>
             </div>
-            <p class="text-gray-600">
+            <p class="text-muted dark:text-slate-400">
               Encontre o que precisa rapidamente com nossa busca inteligente.
             </p>
           </div>
@@ -79,12 +83,26 @@ const metadata = {
               </div>
               <h3 class="text-lg font-medium">Sempre Atualizado</h3>
             </div>
-            <p class="text-gray-600">
+            <p class="text-muted dark:text-slate-400">
               Novos artigos e atualizações toda semana.
             </p>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg border border-transparent px-4 py-2 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition ease-in-out duration-150;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+  }
+  
+  .highlight {
+    @apply px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800;
+  }
+</style>
