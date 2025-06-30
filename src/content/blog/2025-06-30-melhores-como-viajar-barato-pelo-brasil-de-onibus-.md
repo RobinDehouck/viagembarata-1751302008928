@@ -1,6 +1,6 @@
 ---
-publishDate: 2025-06-30T19:06:01.239Z
-pubDate: 2025-06-30T19:06:01.239Z
+publishDate: 2025-06-30T19:18:23.282Z
+pubDate: 2025-06-30T19:18:23.282Z
 title: "Melhores como viajar barato pelo brasil de ônibus 2025: Guia Completo + Dicas Exclusivas"
 description: "Descubra os melhores como viajar barato pelo brasil de ônibus de 2025. Guia completo com análises, comparações, preços e dicas de especialistas."
 excerpt: "Descubra os melhores como viajar barato pelo brasil de ônibus de 2025. Guia completo com análises, comparações, preços e dicas de especialistas."
