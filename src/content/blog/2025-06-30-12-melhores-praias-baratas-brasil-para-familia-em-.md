@@ -1,6 +1,6 @@
 ---
-publishDate: 2025-06-30T19:06:42.695Z
-pubDate: 2025-06-30T19:06:42.695Z
+publishDate: 2025-06-30T19:18:22.402Z
+pubDate: 2025-06-30T19:18:22.402Z
 title: "12 Melhores Praias Baratas Brasil Para Família em 2024 [Guia]"
 description: "Descubra as 12 melhores praias baratas no Brasil para viajar com a família em 2024! Guia completo com dicas, preços e atividades para todos os bolsos."
 excerpt: "Descubra as 12 melhores praias baratas no Brasil para viajar com a família em 2024! Guia completo com dicas, preços e atividades para todos os bolsos."
