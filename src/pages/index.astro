@@ -2,107 +2,65 @@
 import Layout from '../layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Bem-vindo ao Seu Site',
-  ignoreTitleTemplate: true,
+  title: 'ViagemBarata - Viaje Barato pelo Brasil',
+  description: 'Descubra as melhores dicas para viajar pelo Brasil gastando pouco. Roteiros, hospedagens baratas e experiências incríveis!',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-  <section class="px-6 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 mx-auto max-w-3xl">
-    <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-        Bem-vindo ao 
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 highlight">
-          Seu Site
-        </span>
-      </h1>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-xl text-muted mb-6 dark:text-slate-300">
-          Descubra as melhores informações, dicas e recomendações. 
-          Seu guia completo para tomar as melhores decisões.
-        </p>
-        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-          <div class="flex w-full sm:w-auto">
-            <a
-              class="btn btn-primary sm:mb-0 w-full"
-              href="/blog"
-            >
-              Ver Artigos
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Hero Section -->
+  <section class="px-6 py-20 mx-auto max-w-6xl text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+      Viaje pelo Brasil 
+      <span class="text-blue-600">Gastando Pouco</span>
+    </h1>
+    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+      Descubra as melhores dicas, roteiros e segredos para explorar cada canto do Brasil 
+      sem estourar o orçamento. Sua próxima aventura começa aqui!
+    </p>
+    <a href="/blog" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition-colors">
+      Ver Dicas de Viagem
+    </a>
   </section>
 
-  <!-- Content Widget **************** -->
-  <section class="px-6 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
-    <div class="mx-auto max-w-6xl">
-      <div class="row-gap-10 dark:text-slate-400">
-        <div class="md:py-4 md:pr-16 mb-6 md:mb-0">
-          <h2 class="mb-8 text-3xl lg:text-4xl font-bold font-heading">
-            Por que escolher nosso site?
-          </h2>
+  <!-- Features -->
+  <section class="px-6 py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+        Por que escolher o ViagemBarata?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Economia Garantida</h3>
+          <p class="text-gray-600">Dicas testadas para economizar em hospedagem, transporte e alimentação.</p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div class="mb-2">
-            <div class="flex items-center mb-4">
-              <div class="mr-4">
-                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <h3 class="text-lg font-medium">Informações Confiáveis</h3>
-            </div>
-            <p class="text-muted dark:text-slate-400">
-              Conteúdo verificado e atualizado regularmente por especialistas.
-            </p>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
           </div>
-          
-          <div class="mb-2">
-            <div class="flex items-center mb-4">
-              <div class="mr-4">
-                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <h3 class="text-lg font-medium">Respostas Rápidas</h3>
-            </div>
-            <p class="text-muted dark:text-slate-400">
-              Encontre o que precisa rapidamente com nossa busca inteligente.
-            </p>
+          <h3 class="text-xl font-semibold mb-2">Destinos Únicos</h3>
+          <p class="text-gray-600">Lugares incríveis e pouco conhecidos em todos os estados brasileiros.</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
           </div>
-          
-          <div class="mb-2">
-            <div class="flex items-center mb-4">
-              <div class="mr-4">
-                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                </svg>
-              </div>
-              <h3 class="text-lg font-medium">Sempre Atualizado</h3>
-            </div>
-            <p class="text-muted dark:text-slate-400">
-              Novos artigos e atualizações toda semana.
-            </p>
-          </div>
+          <h3 class="text-xl font-semibold mb-2">Informações Confiáveis</h3>
+          <p class="text-gray-600">Conteúdo verificado por viajantes experientes e atualizações constantes.</p>
         </div>
       </div>
     </div>
   </section>
 </Layout>
-
-<style>
-  .btn {
-    @apply inline-flex items-center justify-center rounded-lg border border-transparent px-4 py-2 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition ease-in-out duration-150;
-  }
-  
-  .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
-  }
-  
-  .highlight {
-    @apply px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800;
-  }
-</style>
