@@ -6,9 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://viagembarata.vercel.app',
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
+    tailwind(),
     mdx(),
     sitemap(),
   ],
