@@ -1,6 +1,6 @@
 # ViagemBarata
 
-Site criado automaticamente com template Astro minimalista.
+Site criado automaticamente com AstroWind template.
 
 ## Comandos
 
