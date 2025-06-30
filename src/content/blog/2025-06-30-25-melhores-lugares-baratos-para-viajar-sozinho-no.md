@@ -1,6 +1,6 @@
 ---
-publishDate: 2025-06-30T19:07:32.150Z
-pubDate: 2025-06-30T19:07:32.150Z
+publishDate: 2025-06-30T19:18:22.021Z
+pubDate: 2025-06-30T19:18:22.021Z
 title: "25 Melhores Lugares Baratos para Viajar Sozinho no Brasil [2025]"
 description: "Descubra os 25 melhores lugares baratos para viajar sozinho no Brasil em 2025! Roteiros incríveis, dicas de economia e segurança para sua aventura solo."
 excerpt: "Descubra os 25 melhores lugares baratos para viajar sozinho no Brasil em 2025! Roteiros incríveis, dicas de economia e segurança para sua aventura solo."
