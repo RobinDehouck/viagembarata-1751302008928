@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://viagembarata.vercel.app',
+  site: 'https://example.com',
   integrations: [
     tailwind(),
     mdx(),
