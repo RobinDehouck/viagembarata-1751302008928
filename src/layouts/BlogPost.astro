@@ -1,0 +1,116 @@
+---
+import Layout from './PageLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  post: CollectionEntry<'post'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const metadata = {
+  title: post.data.title,
+  description: post.data.excerpt,
+};
+
+// Format date properly
+const publishDate = post.data.publishDate || post.data.pubDate || new Date();
+---
+
+<Layout metadata={metadata}>
+  <!-- Ultra-Refined Hero Section - Clean & Minimal -->
+  <div class="bg-white border-b border-gray-100">
+    <div class="mx-auto max-w-4xl px-6 py-20 sm:px-6 lg:px-8">
+      <div class="text-center">
+        {post.data.category && (
+          <div class="mb-8">
+            <span class="inline-flex items-center px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-md border border-blue-200">
+              {post.data.category}
+            </span>
+          </div>
+        )}
+        
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight max-w-4xl mx-auto">
+          {post.data.title}
+        </h1>
+        
+        {post.data.excerpt && (
+          <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+            {post.data.excerpt}
+          </p>
+        )}
+        
+        <div class="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-500 mb-8">
+          <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <time datetime={publishDate.toISOString ? publishDate.toISOString() : publishDate}>
+              {new Date(publishDate).toLocaleDateString('pt-BR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+          </div>
+          
+          {post.data.author && (
+            <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+              <span>por {post.data.author}</span>
+            </div>
+          )}
+          
+          {post.data.estimated_read_time && (
+            <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>{post.data.estimated_read_time}</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <article class="mx-auto max-w-4xl px-6 py-12 sm:px-6 lg:px-8">
+    <!-- Reading Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+      <div class="h-full bg-blue-500 transition-all duration-300" style="width: 0%" id="reading-progress"></div>
+    </div>
+    
+    <div class="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-strong:text-gray-900 dark:prose-strong:text-white">
+      <Content />
+    </div>
+    
+    {post.data.tags.length > 0 && (
+      <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Tags</h3>
+        <div class="flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <span class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </footer>
+    )}
+    
+    <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+      <a 
+        href="/blog" 
+        class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-medium"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Voltar ao Blog
+      </a>
+    </div>
+  </article>
+</Layout>
